@@ -2,7 +2,7 @@ from fastapi import status
 from fastapi.exceptions import HTTPException
 from ollama import ListResponse, ResponseError, ShowResponse, StatusResponse
 
-from app.core.ai_model.ollama import ollama_client
+from app.core.ai_client.ollama import ollama_client
 
 
 async def get_model_list() -> ListResponse:
