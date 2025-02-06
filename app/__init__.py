@@ -8,7 +8,7 @@ from starlette.middleware.sessions import SessionMiddleware
 
 from app.api import api_router
 from app.core.config import CURRENT_CONFIG
-from app.core.database.redis import close_redis_connections
+from app.core.cache.redis import close_redis_connections
 
 
 @asynccontextmanager

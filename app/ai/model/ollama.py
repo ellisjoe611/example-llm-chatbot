@@ -2,7 +2,7 @@ from typing import Literal
 from langchain_community.cache import AsyncRedisCache
 from langchain_ollama import ChatOllama
 
-from app.core.database.redis import chat_cache_redis
+from app.core.cache.redis import chat_cache_redis
 
 OllamaModelStr = Literal[
     "llama2:7b",
