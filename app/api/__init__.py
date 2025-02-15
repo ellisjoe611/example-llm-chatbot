@@ -1,6 +1,6 @@
 from fastapi.routing import APIRouter
 
-from .ai_model.model.base import router as ai_model_router
+from .ai.model.base import router as ai_model_router
 from .chatbot.basic import router as chatbot_basic_router
 
 api_router = APIRouter(prefix="/api")
