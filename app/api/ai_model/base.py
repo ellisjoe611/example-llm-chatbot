@@ -4,7 +4,7 @@ from fastapi import Path, status
 from fastapi.routing import APIRouter
 from ollama import ListResponse, ShowResponse
 
-from app.domain.ai_model.ollama import get_model_info, get_model_list
+from app.domain.ai_model.ollama import OllamaModelService
 
 router = APIRouter()
 
@@ -17,7 +17,7 @@ router = APIRouter()
     response_model=ListResponse,
 )
 async def get_list():
-    return await get_model_list()
+    return await OllamaModelService.get_model_list()
 
 
 @router.get(
@@ -30,4 +30,4 @@ async def get_list():
 async def get_info(
     model_name: Annotated[str, Path(description="Name of AI model")],
 ):
-    return await get_model_info(model_name=model_name)
+    return await OllamaModelService.get_model_info(model_name=model_name)
