@@ -4,7 +4,7 @@ from fastapi import Path, status
 from fastapi.routing import APIRouter
 from ollama import ListResponse, ShowResponse
 
-from app.domain.ai_model.ollama import OllamaModelService
+from app.domain.ai.model.ollama import OllamaModelService
 
 router = APIRouter()
 
